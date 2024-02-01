@@ -17,10 +17,12 @@ public class Main {
         for (int i = 1; i < 6; i++) {
             HTag h1 = new HTag(i);
             h1.setTagText("jeg er et " + h1.getTagName() + " tag");
+            h1.setColor(i*4, i*3, i*5);
             hTags.add(h1);
             for (int j=i; j<=5; j++) {
                 Ptag ptag = new Ptag();
                 ptag.setTagText("Jeg er et ptag i htag " + hTag.getTagName());
+                ptag.setColor(j*1, j*2, j*7);
                 hTags.add(ptag);
             }
         }

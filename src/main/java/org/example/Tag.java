@@ -89,9 +89,11 @@ public abstract class Tag {
         return s1;
     }
     public String toHTMLString() {
-        String s1 = "<" + tagName + ">"; // <h1>
+        String s1 = "";
         if (this.getColor().length() > 0) {
-            s1 = s1 + "style=" + '"' + "color:" + this.getColor() + '"' + ">";
+            s1 = "<" + tagName + " style=" + '"' + "background-color:" + color + '"' + ">";
+        } else{
+            s1 = "<" + tagName + ">";
         }
         for (Tag tag: children) {
             String child = tag.toHTMLString();
