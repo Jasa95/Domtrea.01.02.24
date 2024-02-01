@@ -11,7 +11,7 @@ public abstract class Tag {
     private String tagName;
     private String tagText;
     private List<Tag> children;
-    private String color; //#ff0000 = red
+    private String color = ""; //#ff0000 = red
 
     public Tag() {
         children = new ArrayList<>();
@@ -90,6 +90,9 @@ public abstract class Tag {
     }
     public String toHTMLString() {
         String s1 = "<" + tagName + ">"; // <h1>
+        if (this.getColor().length() > 0) {
+            s1 = s1 + "style=" + '"' + "color:" + this.getColor() + '"' + ">";
+        }
         for (Tag tag: children) {
             String child = tag.toHTMLString();
             s1 = s1 + (char) 10 + child;
