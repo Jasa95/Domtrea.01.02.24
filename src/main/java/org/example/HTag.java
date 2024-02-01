@@ -5,15 +5,19 @@ public class HTag extends Tag {
 
     public HTag(int hNumber) {
         number = (byte) hNumber;
-        this.setTagName("h" + hNumber);
+        this.setNumber(hNumber);
     }
 
     public byte getNumber() {
         return number;
     }
 
+    public void setNumber(byte number) {
+        this.number = number;
+        this.setTagName("h" + number);
+    }
     public void setNumber(int number) {
-        this.number = (byte) number;
+        this.setNumber((byte) number);
     }
 
     @Override
