@@ -40,7 +40,7 @@ public class Main {
         body.toHTMLStringFile("index.html");
 
         body.rgbToHex(255, 23, 9);
-        System.out.println(body.);
+        System.out.println(body.getColor());
 
     }
 }
